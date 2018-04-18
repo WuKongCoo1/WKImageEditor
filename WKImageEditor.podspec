@@ -32,57 +32,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'WKImageEditor/**/*.{h,m}'
 
-   # s.resource_bundles = {
-   #   'WKImageEditor' => ['WKImageEditor/Assets/*', 'WKImageEditor/Resources/*']
-   # }
-   # s.resources = ['WKImageEditor/Assets/*', 'WKImageEditor/Resources/*']
+  s.frameworks = 'UIKit'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'CGBase'
   s.dependency 'SDWebImage'
-  # s.dependency 'CGNetworkingHub'
-  # s.dependency 'CGAlertView'
-  # s.dependency 'SDWebImage'
-  # s.dependency 'SAMKeychain'
-  # s.dependency 'Aspects'
-  # s.dependency 'CGOwnLibraries'
-  # s.dependency 'CGHomeHub'
-  # s.dependency 'CGStudentModuleHub'
-  
-
-
-    # s.subspec 'Haders' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/WKDefine.h'
-    # end
-    # s.subspec 'Model' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/Model/*.{h,m}'
-    # # ss.dependency 'WKImageEditor/Category'
-    # end
-    # s.subspec 'ViewModel' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/ViewModel/*.{h,m}'
-    # # ss.dependency 'WKImageEditor/Category'
-    # ss.dependency 'WKImageEditor/Model'
-    # ss.dependency 'WKImageEditor/View'
-    # ss.dependency 'WKImageEditor/Haders'
-    # end
-    # s.subspec 'Controller' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/Controller/*.{h,m}'
-    # # ss.dependency 'WKImageEditor/Category'
-    # ss.dependency 'WKImageEditor/Model'
-    # ss.dependency 'WKImageEditor/ViewModel'
-    # ss.dependency 'WKImageEditor/View'
-    # ss.dependency 'WKImageEditor/Haders'
-    # end
-    # s.subspec 'View' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/View/*.{h,m}'
-    # # ss.dependency 'WKImageEditor/Category'
-    # ss.dependency 'WKImageEditor/Model'
-    # ss.dependency 'WKImageEditor/Haders'
-    # end
-    # s.subspec 'Target' do |ss|
-    # ss.source_files = 'WKImageEditor/Classes/Target/*.{h,m}'
-    # ss.dependency 'WKImageEditor/Controller'
-    # end
+  s.dependency 'Masonry'
     
 end
