@@ -10,12 +10,12 @@
 		259F8F227AD761C5C0CA5E75 /* libPods-WKImageEditor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D29342E4CB5DB0151FA427 /* libPods-WKImageEditor.a */; };
 		50C9EC295284832715A7C321 /* libPods-WKImageEditorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66A75E5AF2F954550675D7 /* libPods-WKImageEditorUITests.a */; };
 		54CDC1DB21E4034A0B0915CA /* libPods-WKImageEditorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDF532F5D785B142E09B2C6 /* libPods-WKImageEditorTests.a */; };
-		6767837E2085FD2800C5342B /* WKImageEditorEditContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767836F2085FD2800C5342B /* WKImageEditorEditContainer.m */; };
-		676783802085FD2800C5342B /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 676783742085FD2800C5342B /* UIImage+Resize.m */; };
-		676783812085FD2800C5342B /* WKImageEditorDrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 676783762085FD2800C5342B /* WKImageEditorDrawTool.m */; };
-		676783822085FD2800C5342B /* WKImageEditorInputTextViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 676783782085FD2800C5342B /* WKImageEditorInputTextViewContainer.m */; };
-		676783832085FD2800C5342B /* WKImageEditorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767837B2085FD2800C5342B /* WKImageEditorScrollView.m */; };
-		676783842085FD2800C5342B /* WKImageEditorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767837D2085FD2800C5342B /* WKImageEditorTextView.m */; };
+		67240B0C209AF6F7006A3E98 /* WKImageEditorEditContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240AFF209AF6F7006A3E98 /* WKImageEditorEditContainer.m */; };
+		67240B0D209AF6F7006A3E98 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B02209AF6F7006A3E98 /* UIImage+Resize.m */; };
+		67240B0E209AF6F7006A3E98 /* WKImageEditorDrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B04209AF6F7006A3E98 /* WKImageEditorDrawTool.m */; };
+		67240B0F209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B06209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m */; };
+		67240B10209AF6F7006A3E98 /* WKImageEditorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */; };
+		67240B11209AF6F7006A3E98 /* WKImageEditorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */; };
 		67D65C9E2073653900EF16DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65C9D2073653900EF16DC /* AppDelegate.m */; };
 		67D65CA12073653900EF16DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65CA02073653900EF16DC /* ViewController.m */; };
 		67D65CA42073653900EF16DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D65CA22073653900EF16DC /* Main.storyboard */; };
@@ -48,20 +48,20 @@
 		472D7174D7E358811C8BB911 /* Pods-WKImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditor/Pods-WKImageEditor.release.xcconfig"; sourceTree = "<group>"; };
 		5FD5D9B19E10EB87543983EC /* Pods-WKImageEditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditorTests/Pods-WKImageEditorTests.release.xcconfig"; sourceTree = "<group>"; };
 		63D29342E4CB5DB0151FA427 /* libPods-WKImageEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WKImageEditor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6767836D2085FD2800C5342B /* WKImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditor.h; sourceTree = "<group>"; };
-		6767836E2085FD2800C5342B /* WKImageEditorEditContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorEditContainer.h; sourceTree = "<group>"; };
-		6767836F2085FD2800C5342B /* WKImageEditorEditContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorEditContainer.m; sourceTree = "<group>"; };
-		676783732085FD2800C5342B /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		676783742085FD2800C5342B /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		676783752085FD2800C5342B /* WKImageEditorDrawTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorDrawTool.h; sourceTree = "<group>"; };
-		676783762085FD2800C5342B /* WKImageEditorDrawTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorDrawTool.m; sourceTree = "<group>"; };
-		676783772085FD2800C5342B /* WKImageEditorInputTextViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorInputTextViewContainer.h; sourceTree = "<group>"; };
-		676783782085FD2800C5342B /* WKImageEditorInputTextViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorInputTextViewContainer.m; sourceTree = "<group>"; };
-		676783792085FD2800C5342B /* WKImageEditorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorProtocol.h; sourceTree = "<group>"; };
-		6767837A2085FD2800C5342B /* WKImageEditorScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorScrollView.h; sourceTree = "<group>"; };
-		6767837B2085FD2800C5342B /* WKImageEditorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorScrollView.m; sourceTree = "<group>"; };
-		6767837C2085FD2800C5342B /* WKImageEditorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorTextView.h; sourceTree = "<group>"; };
-		6767837D2085FD2800C5342B /* WKImageEditorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorTextView.m; sourceTree = "<group>"; };
+		67240AFD209AF6F7006A3E98 /* WKImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditor.h; sourceTree = "<group>"; };
+		67240AFE209AF6F7006A3E98 /* WKImageEditorEditContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorEditContainer.h; sourceTree = "<group>"; };
+		67240AFF209AF6F7006A3E98 /* WKImageEditorEditContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorEditContainer.m; sourceTree = "<group>"; };
+		67240B01209AF6F7006A3E98 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		67240B02209AF6F7006A3E98 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		67240B03209AF6F7006A3E98 /* WKImageEditorDrawTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorDrawTool.h; sourceTree = "<group>"; };
+		67240B04209AF6F7006A3E98 /* WKImageEditorDrawTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorDrawTool.m; sourceTree = "<group>"; };
+		67240B05209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorInputTextViewContainer.h; sourceTree = "<group>"; };
+		67240B06209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorInputTextViewContainer.m; sourceTree = "<group>"; };
+		67240B07209AF6F7006A3E98 /* WKImageEditorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorProtocol.h; sourceTree = "<group>"; };
+		67240B08209AF6F7006A3E98 /* WKImageEditorScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorScrollView.h; sourceTree = "<group>"; };
+		67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorScrollView.m; sourceTree = "<group>"; };
+		67240B0A209AF6F7006A3E98 /* WKImageEditorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorTextView.h; sourceTree = "<group>"; };
+		67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorTextView.m; sourceTree = "<group>"; };
 		67D65C992073653900EF16DC /* WKImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D65C9C2073653900EF16DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67D65C9D2073653900EF16DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,31 +113,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6767836C2085FD2800C5342B /* WKImageEditor */ = {
+		67240AFC209AF6F7006A3E98 /* WKImageEditor */ = {
 			isa = PBXGroup;
 			children = (
-				6767836D2085FD2800C5342B /* WKImageEditor.h */,
-				6767836E2085FD2800C5342B /* WKImageEditorEditContainer.h */,
-				6767836F2085FD2800C5342B /* WKImageEditorEditContainer.m */,
-				676783702085FD2800C5342B /* WKImageEditorTools */,
+				67240AFD209AF6F7006A3E98 /* WKImageEditor.h */,
+				67240AFE209AF6F7006A3E98 /* WKImageEditorEditContainer.h */,
+				67240AFF209AF6F7006A3E98 /* WKImageEditorEditContainer.m */,
+				67240B00209AF6F7006A3E98 /* WKImageEditorTools */,
 			);
-			path = WKImageEditor;
+			name = WKImageEditor;
+			path = ../../WKImageEditor;
 			sourceTree = "<group>";
 		};
-		676783702085FD2800C5342B /* WKImageEditorTools */ = {
+		67240B00209AF6F7006A3E98 /* WKImageEditorTools */ = {
 			isa = PBXGroup;
 			children = (
-				676783732085FD2800C5342B /* UIImage+Resize.h */,
-				676783742085FD2800C5342B /* UIImage+Resize.m */,
-				676783752085FD2800C5342B /* WKImageEditorDrawTool.h */,
-				676783762085FD2800C5342B /* WKImageEditorDrawTool.m */,
-				676783772085FD2800C5342B /* WKImageEditorInputTextViewContainer.h */,
-				676783782085FD2800C5342B /* WKImageEditorInputTextViewContainer.m */,
-				676783792085FD2800C5342B /* WKImageEditorProtocol.h */,
-				6767837A2085FD2800C5342B /* WKImageEditorScrollView.h */,
-				6767837B2085FD2800C5342B /* WKImageEditorScrollView.m */,
-				6767837C2085FD2800C5342B /* WKImageEditorTextView.h */,
-				6767837D2085FD2800C5342B /* WKImageEditorTextView.m */,
+				67240B01209AF6F7006A3E98 /* UIImage+Resize.h */,
+				67240B02209AF6F7006A3E98 /* UIImage+Resize.m */,
+				67240B03209AF6F7006A3E98 /* WKImageEditorDrawTool.h */,
+				67240B04209AF6F7006A3E98 /* WKImageEditorDrawTool.m */,
+				67240B05209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.h */,
+				67240B06209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m */,
+				67240B07209AF6F7006A3E98 /* WKImageEditorProtocol.h */,
+				67240B08209AF6F7006A3E98 /* WKImageEditorScrollView.h */,
+				67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */,
+				67240B0A209AF6F7006A3E98 /* WKImageEditorTextView.h */,
+				67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */,
 			);
 			path = WKImageEditorTools;
 			sourceTree = "<group>";
@@ -167,7 +168,7 @@
 		67D65C9B2073653900EF16DC /* WKImageEditor */ = {
 			isa = PBXGroup;
 			children = (
-				6767836C2085FD2800C5342B /* WKImageEditor */,
+				67240AFC209AF6F7006A3E98 /* WKImageEditor */,
 				67D65C9C2073653900EF16DC /* AppDelegate.h */,
 				67D65C9D2073653900EF16DC /* AppDelegate.m */,
 				67D65C9F2073653900EF16DC /* ViewController.h */,
@@ -416,15 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676783842085FD2800C5342B /* WKImageEditorTextView.m in Sources */,
-				6767837E2085FD2800C5342B /* WKImageEditorEditContainer.m in Sources */,
+				67240B0C209AF6F7006A3E98 /* WKImageEditorEditContainer.m in Sources */,
+				67240B0F209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m in Sources */,
+				67240B10209AF6F7006A3E98 /* WKImageEditorScrollView.m in Sources */,
 				67D65CA12073653900EF16DC /* ViewController.m in Sources */,
 				67D65CAC2073653900EF16DC /* main.m in Sources */,
-				676783812085FD2800C5342B /* WKImageEditorDrawTool.m in Sources */,
 				67D65C9E2073653900EF16DC /* AppDelegate.m in Sources */,
-				676783802085FD2800C5342B /* UIImage+Resize.m in Sources */,
-				676783822085FD2800C5342B /* WKImageEditorInputTextViewContainer.m in Sources */,
-				676783832085FD2800C5342B /* WKImageEditorScrollView.m in Sources */,
+				67240B0E209AF6F7006A3E98 /* WKImageEditorDrawTool.m in Sources */,
+				67240B0D209AF6F7006A3E98 /* UIImage+Resize.m in Sources */,
+				67240B11209AF6F7006A3E98 /* WKImageEditorTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

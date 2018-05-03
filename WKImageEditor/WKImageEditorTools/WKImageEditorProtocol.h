@@ -14,6 +14,8 @@
 - (void)rollback;
 - (void)clear;
 
+- (void)setDrawColor:(UIColor *)color;
+
 @end
 
 //编辑操作回调协议

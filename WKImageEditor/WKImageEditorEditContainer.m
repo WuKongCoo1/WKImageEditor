@@ -251,4 +251,10 @@ WKImageEditorOperateDelegate
     self.inputTextViewContainer.OperateType = OperateType;
 }
 
+- (void)setDrawColor:(UIColor *)drawColor
+{
+    _drawColor = drawColor;
+    self.scorllView.drawColor = drawColor;
+    self.inputTextViewContainer.drawColor = drawColor;
+}
 @end

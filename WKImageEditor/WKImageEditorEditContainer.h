@@ -17,6 +17,7 @@ WKImageEditorOperatorProtocol
 
 @property (assign, nonatomic) WKImageEditorOperateType OperateType;//操作类型，用于指定编辑结果是基于图片还是视图直接截图
 @property (assign, nonatomic) WKImageEditType type;//编辑子类型，表示当前具体的编辑类型是划线还是文字等
+@property (strong, nonatomic) UIColor *drawColor;
 
 
 + (instancetype)imageEditorEditContainerWithUrl:(NSString *)url;

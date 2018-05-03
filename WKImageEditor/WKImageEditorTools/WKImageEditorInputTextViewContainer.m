@@ -23,6 +23,7 @@ UITextViewDelegate
     WKImageEditorTextView *_currentMoveTextView;
     NSMutableArray *_inputTextViews;
     BOOL _isEditing;
+    
 }
 
 
@@ -123,10 +124,10 @@ UITextViewDelegate
         textView.delegate = self;
         textView.scrollEnabled = NO;
         textView.backgroundColor = [UIColor clearColor];
-
+        textView.textColor = _drawColor;
+        
         [self adjustLayoutWithTextView:textView];
         [_inputTextViews addObject:textView];
-        _currentEditTextView = textView;
         
         //告诉deleate做了一次操作
         if ([self.operateDelegate respondsToSelector:@selector(editOperator:type:)]) {
@@ -134,6 +135,8 @@ UITextViewDelegate
         }
         
         self.layer.masksToBounds = NO;
+        
+        _currentEditTextView = textView;
     }
     
     
@@ -190,7 +193,7 @@ UITextViewDelegate
     return nil;
 }
 
-
+#pragma mark - WKImageEditorProtocol
 - (void)rollback
 {
     [_inputTextViews enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(UIView *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -209,5 +212,10 @@ UITextViewDelegate
     }];
     
     [_inputTextViews removeAllObjects];
+}
+
+- (void)setDrawColor:(UIColor *)color
+{
+    _drawColor = color;
 }
 @end

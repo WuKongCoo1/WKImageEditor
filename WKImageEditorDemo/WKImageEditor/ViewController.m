@@ -74,7 +74,7 @@
     });
     
     self.container = container;
-    container.OperateType = WKImageEditOperateTypeCaptureFromContainerView;
+    container.OperateType = WKImageEditOperateTypeBaseOnOriginalImage;
     
     container.drawColor = [UIColor redColor];
     

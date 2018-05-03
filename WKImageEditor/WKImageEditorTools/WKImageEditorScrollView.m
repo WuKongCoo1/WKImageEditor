@@ -48,6 +48,8 @@ WKImageEditorDrawToolDataSource
 @property (strong, nonatomic) WKImageEditorDrawTool *drawTool;
 @property (strong, nonatomic) WKImageEditorTextView *currentInputTextView;
 
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+
 //绘制属性
 @property (strong, nonatomic) NSMutableArray *drawDataSource;
 @property (assign, nonatomic) NSInteger operateID;
@@ -78,14 +80,14 @@ WKImageEditorDrawToolDataSource
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self commonSetup];
-    }
-    return self;
-}
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        [self commonSetup];
+//    }
+//    return self;
+//}
 
 - (void)commonSetup
 {
@@ -117,6 +119,7 @@ WKImageEditorDrawToolDataSource
     panGesture.maximumNumberOfTouches = 1;
     
     [self addGestureRecognizer:panGesture];
+    self.panGesture = panGesture;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -124,7 +127,7 @@ WKImageEditorDrawToolDataSource
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.imageView;
-    return self.isEditing ? nil : self.imageView;
+//    return self.isEditing ? nil : self.imageView;
 }
 
 //开始缩放的时候调用
@@ -466,6 +469,15 @@ WKImageEditorDrawToolDataSource
     return _imageView;
 }
 
+- (UIColor *)drawColor
+{
+    if (_drawColor == nil) {
+        _drawColor = [UIColor blackColor];
+    }
+    
+    return _drawColor;
+}
+
 #pragma mark - Draw Line
 - (void)drawingViewDidPan:(UIPanGestureRecognizer*)sender
 {
@@ -543,6 +555,7 @@ WKImageEditorDrawToolDataSource
         drawInfo[WKImageEditorDrawToolInfoKeyFromPoint] = [NSValue valueWithCGPoint:from];
         drawInfo[WKImageEditorDrawToolInfoKeyToPoint] = [NSValue valueWithCGPoint:to];
         drawInfo[WKImageEditorDrawToolInfoKeyDrawID] = @(self.operateID);
+        drawInfo[WKImageEditorDrawToolInfoKeyDrawColor] = self.drawColor;
 
         switch (self.drawType) {
             case WKImageEditorScrollViewDrawTypeLine:
@@ -608,6 +621,7 @@ WKImageEditorDrawToolDataSource
     _isEditing = isEditing;
     self.imageView.userInteractionEnabled = isEditing;
     self.scrollEnabled = !isEditing;
+    self.panGesture.enabled = isEditing;
 }
 
 - (void)rollback

@@ -158,23 +158,24 @@
             NSAssert([self.dataSource respondsToSelector:@selector(imageEditorDrawTool:drawInfoAtIndex:)], @"请实现imageEditorDrawTool:drawInfoAtIndex:方法", index);
             drawInfo = [self.dataSource imageEditorDrawTool:self drawInfoAtIndex:index];
             drawType = [drawInfo[WKImageEditorDrawToolInfoKeyDrawType] integerValue];
+            UIColor *drawColor = drawInfo[WKImageEditorDrawToolInfoKeyDrawColor];
             CGPoint from = [drawInfo[WKImageEditorDrawToolInfoKeyFromPoint] CGPointValue];
             CGPoint to = [drawInfo[WKImageEditorDrawToolInfoKeyToPoint] CGPointValue];
             
             switch (drawType) {
                 case WKImageEditorDrawToolDrawTypeLine:
-                   resultImage = [WKImageEditorDrawTool drawLine:context from:from to:to drawColor:self.drawColor];
+                   resultImage = [WKImageEditorDrawTool drawLine:context from:from to:to drawColor:drawColor];
                     break;
                 case WKImageEditorDrawToolDrawTypeBezier:{
                     UIBezierPath *bezierPath = drawInfo[WKImageEditorDrawToolInfoKeyBezier];
-                    resultImage = [WKImageEditorDrawTool drawPath:context path:bezierPath.CGPath drawColor:self.drawColor];
+                    resultImage = [WKImageEditorDrawTool drawPath:context path:bezierPath.CGPath drawColor:drawColor];
                 }
                     break;
                 case WKImageEditorDrawToolDrawTypeRect:
-                    resultImage = [WKImageEditorDrawTool drawRect:context from:from to:to drawColor:self.drawColor];
+                    resultImage = [WKImageEditorDrawTool drawRect:context from:from to:to drawColor:drawColor];
                     break;
                 case WKImageEditorDrawToolDrawTypeCircle:
-                    resultImage = [WKImageEditorDrawTool drawCircle:context from:from to:to drawColor:self.drawColor];
+                    resultImage = [WKImageEditorDrawTool drawCircle:context from:from to:to drawColor:drawColor];
                     break;
                 default:
                     break;

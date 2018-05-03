@@ -13,6 +13,7 @@
 typedef NS_STRING_ENUM NSString * WKImageEditorDrawToolInfoKey;
 static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyFromPoint = @"WKImageEditorDrawToolInfoKeyFromPoint";//起始点
 static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyToPoint = @"WKImageEditorDrawToolInfoKeyToPoint";//终止点
+static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyDrawColor = @"WKImageEditorDrawToolInfoKeyDrawColor";//终止点
 static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyDrawType = @"WKImageEditorDrawToolInfoKeyDrawType";//绘制类型
 static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyDrawID = @"WKImageEditorDrawToolInfoKeyDrawID";//绘制id
 static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyBezier = @"WKImageEditorDrawToolInfoKeyBezier";//绘制曲线的beizerPath
