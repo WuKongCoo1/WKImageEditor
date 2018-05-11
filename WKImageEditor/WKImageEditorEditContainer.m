@@ -74,6 +74,8 @@ WKImageEditorOperateDelegate
 
 - (void)commonSetup
 {
+    self.drawFont = [UIFont systemFontOfSize:14.f];
+    
     self.scorllView = ({
         WKImageEditorScrollView *sv = [[WKImageEditorScrollView alloc] init];
         [self addSubview:sv];
@@ -110,6 +112,7 @@ WKImageEditorOperateDelegate
     });
     self.inputTextViewContainer.operateDelegate = self;
     self.inputTextViewContainer.OperateType = self.OperateType;
+    self.inputTextViewContainer.drawFont = self.drawFont;
     self.operations = [NSMutableArray array];
 }
 
@@ -256,5 +259,11 @@ WKImageEditorOperateDelegate
     _drawColor = drawColor;
     self.scorllView.drawColor = drawColor;
     self.inputTextViewContainer.drawColor = drawColor;
+}
+
+- (void)setDrawFont:(UIFont *)drawFont
+{
+    _drawFont = drawFont;
+    self.inputTextViewContainer.drawFont = drawFont;
 }
 @end

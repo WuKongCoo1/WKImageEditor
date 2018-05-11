@@ -61,6 +61,8 @@ UITextViewDelegate
     [self addGestureRecognizer:pan];
     
     _inputTextViews = [NSMutableArray array];
+    
+    _drawFont = [UIFont systemFontOfSize:14.f];
 }
 
 - (void)pan:(UIPanGestureRecognizer *)sender
@@ -118,6 +120,7 @@ UITextViewDelegate
     }else{
         CGRect rect = CGRectMake(point.x, point.y, 100, 100);
         WKImageEditorTextView *textView = [[WKImageEditorTextView alloc] initWithFrame:rect];
+        textView.font = _drawFont;
         textView.text = @"";
         [self addSubview:textView];
         [textView becomeFirstResponder];
@@ -217,5 +220,11 @@ UITextViewDelegate
 - (void)setDrawColor:(UIColor *)color
 {
     _drawColor = color;
+}
+
+- (void)setDrawFont:(UIFont *)drawFont
+{
+    _drawFont = drawFont;
+    
 }
 @end

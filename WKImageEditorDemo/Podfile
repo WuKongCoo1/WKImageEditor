@@ -6,6 +6,7 @@ target 'WKImageEditor' do
   
   pod 'SDWebImage'
   pod 'Masonry'
+  pod 'OAStackView'
   
   target 'WKImageEditorTests' do
     inherit! :search_paths

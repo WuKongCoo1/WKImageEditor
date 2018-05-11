@@ -17,6 +17,8 @@ WKImageEditorOperatorProtocol
 @property (nonatomic, weak) id<WKImageEditorOperateDelegate> operateDelegate;
 @property (assign, nonatomic) WKImageEditorOperateType OperateType;//操作类型，用于指定编辑结果是基于图片还是视图直接截图
 @property (nonatomic, strong ) UIColor *drawColor;
+
+@property (strong, nonatomic) UIFont *drawFont;
 - (void)beginInputText;
 - (void)endInputText;
 

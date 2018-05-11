@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SWu-dz-1Hy" customClass="WKImageEditorToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="581" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9s-ZX-SX1" userLabel="1">
+                    <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G92-EG-vFt" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                            <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="WKImageEditor_color"/>
+                            <connections>
+                                <action selector="chooseColorAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="BOC-ig-xg2"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plc-K7-s4s" userLabel="line">
+                            <rect key="frame" x="47" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Ebx-3j-3Ai"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Plc-K7-s4s" secondAttribute="bottom" id="0n1-do-5PM"/>
+                        <constraint firstAttribute="trailing" secondItem="G92-EG-vFt" secondAttribute="trailing" id="Dpl-7S-4Ce"/>
+                        <constraint firstItem="G92-EG-vFt" firstAttribute="leading" secondItem="s9s-ZX-SX1" secondAttribute="leading" id="Yyk-si-Lqs"/>
+                        <constraint firstAttribute="trailing" secondItem="Plc-K7-s4s" secondAttribute="trailing" id="ZCf-I1-mT4"/>
+                        <constraint firstAttribute="bottom" secondItem="G92-EG-vFt" secondAttribute="bottom" id="fg6-xm-kuX"/>
+                        <constraint firstItem="Plc-K7-s4s" firstAttribute="top" secondItem="s9s-ZX-SX1" secondAttribute="top" id="m2h-Jb-Z0w"/>
+                        <constraint firstItem="G92-EG-vFt" firstAttribute="top" secondItem="s9s-ZX-SX1" secondAttribute="top" id="nKM-9K-rso"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-pq-Nf4" userLabel="2">
+                    <rect key="frame" x="48" y="0.0" width="48" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciy-zr-Pt5" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                            <state key="normal" image="WKImageEditor_shape_1"/>
+                            <connections>
+                                <action selector="drawRectShape:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="Huj-gB-6Pu"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WC-Lo-pkj" userLabel="line">
+                            <rect key="frame" x="47" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="A7E-DD-zJS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="4WC-Lo-pkj" firstAttribute="top" secondItem="SgZ-pq-Nf4" secondAttribute="top" id="8Hg-9l-7Je"/>
+                        <constraint firstAttribute="bottom" secondItem="4WC-Lo-pkj" secondAttribute="bottom" id="EJz-n6-Ezm"/>
+                        <constraint firstItem="Ciy-zr-Pt5" firstAttribute="leading" secondItem="SgZ-pq-Nf4" secondAttribute="leading" id="IZd-Ha-wSd"/>
+                        <constraint firstAttribute="trailing" secondItem="Ciy-zr-Pt5" secondAttribute="trailing" id="Zlt-P4-JKG"/>
+                        <constraint firstItem="Ciy-zr-Pt5" firstAttribute="top" secondItem="SgZ-pq-Nf4" secondAttribute="top" id="bWp-bH-u2x"/>
+                        <constraint firstAttribute="bottom" secondItem="Ciy-zr-Pt5" secondAttribute="bottom" id="dao-TL-GOB"/>
+                        <constraint firstAttribute="trailing" secondItem="4WC-Lo-pkj" secondAttribute="trailing" id="moM-Uf-O3e"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDY-qz-oxy" userLabel="3">
+                    <rect key="frame" x="96" y="0.0" width="48" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLO-KP-030" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                            <state key="normal" image="WKImageEditor_shape_2"/>
+                            <connections>
+                                <action selector="drawCircleAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="mei-2w-7Ih"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ajq-SE-rd7" userLabel="line">
+                            <rect key="frame" x="47" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="CM9-O1-7Zk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oLO-KP-030" secondAttribute="trailing" id="2Eh-dG-1xk"/>
+                        <constraint firstItem="oLO-KP-030" firstAttribute="top" secondItem="PDY-qz-oxy" secondAttribute="top" id="O5C-oZ-qRg"/>
+                        <constraint firstItem="Ajq-SE-rd7" firstAttribute="top" secondItem="PDY-qz-oxy" secondAttribute="top" id="aFx-FG-pxt"/>
+                        <constraint firstAttribute="bottom" secondItem="oLO-KP-030" secondAttribute="bottom" id="qMa-PK-5SK"/>
+                        <constraint firstAttribute="bottom" secondItem="Ajq-SE-rd7" secondAttribute="bottom" id="sqx-tl-Wim"/>
+                        <constraint firstItem="oLO-KP-030" firstAttribute="leading" secondItem="PDY-qz-oxy" secondAttribute="leading" id="uRQ-Ur-3aP"/>
+                        <constraint firstAttribute="trailing" secondItem="Ajq-SE-rd7" secondAttribute="trailing" id="xJU-K2-rEY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuQ-vz-Nen" userLabel="4">
+                    <rect key="frame" x="144" y="0.0" width="48.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuh-IH-hSn" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48.5" height="35"/>
+                            <state key="normal" image="WKImageEditor_line_1"/>
+                            <connections>
+                                <action selector="drawLineAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="Pzf-mb-aBc"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-lC-Umf" userLabel="line">
+                            <rect key="frame" x="47.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="0Wq-DZ-88F"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="TPY-lC-Umf" secondAttribute="bottom" id="NHI-td-RQs"/>
+                        <constraint firstAttribute="bottom" secondItem="Nuh-IH-hSn" secondAttribute="bottom" id="XCr-Vq-1GP"/>
+                        <constraint firstAttribute="trailing" secondItem="TPY-lC-Umf" secondAttribute="trailing" id="YfZ-DX-qas"/>
+                        <constraint firstItem="Nuh-IH-hSn" firstAttribute="leading" secondItem="YuQ-vz-Nen" secondAttribute="leading" id="wBm-52-M6l"/>
+                        <constraint firstItem="TPY-lC-Umf" firstAttribute="top" secondItem="YuQ-vz-Nen" secondAttribute="top" id="yEd-sQ-uSy"/>
+                        <constraint firstAttribute="trailing" secondItem="Nuh-IH-hSn" secondAttribute="trailing" id="zQA-Oh-O7W"/>
+                        <constraint firstItem="Nuh-IH-hSn" firstAttribute="top" secondItem="YuQ-vz-Nen" secondAttribute="top" id="zTp-4r-5IY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSb-Ef-EVr" userLabel="5">
+                    <rect key="frame" x="192.5" y="0.0" width="48" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-4q-OWr" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                            <state key="normal" image="WKImageEditor_line_2"/>
+                            <connections>
+                                <action selector="drawBezierAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="nmM-k6-Oep"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOr-Dg-9se" userLabel="line">
+                            <rect key="frame" x="47" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="3un-Ni-X0k"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Cf8-4q-OWr" firstAttribute="leading" secondItem="gSb-Ef-EVr" secondAttribute="leading" id="4u3-Yu-NWi"/>
+                        <constraint firstAttribute="trailing" secondItem="Cf8-4q-OWr" secondAttribute="trailing" id="79c-Iv-fK3"/>
+                        <constraint firstAttribute="bottom" secondItem="LOr-Dg-9se" secondAttribute="bottom" id="bBy-0j-z6t"/>
+                        <constraint firstItem="Cf8-4q-OWr" firstAttribute="top" secondItem="gSb-Ef-EVr" secondAttribute="top" id="bqN-6J-kst"/>
+                        <constraint firstAttribute="trailing" secondItem="LOr-Dg-9se" secondAttribute="trailing" id="gyt-gA-9bv"/>
+                        <constraint firstAttribute="bottom" secondItem="Cf8-4q-OWr" secondAttribute="bottom" id="r6b-2n-toi"/>
+                        <constraint firstItem="LOr-Dg-9se" firstAttribute="top" secondItem="gSb-Ef-EVr" secondAttribute="top" id="xYl-sZ-rNv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gga-OB-pAl" userLabel="6">
+                    <rect key="frame" x="240.5" y="0.0" width="48" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQq-Gs-cJp" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                            <state key="normal" image="WKImageEditor_text"/>
+                            <connections>
+                                <action selector="drawTextAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="f4R-GB-fFQ"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edj-OF-P0c" userLabel="line">
+                            <rect key="frame" x="47" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="pG9-Mu-af3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="gQq-Gs-cJp" firstAttribute="leading" secondItem="gga-OB-pAl" secondAttribute="leading" id="6wI-bg-hu2"/>
+                        <constraint firstAttribute="bottom" secondItem="edj-OF-P0c" secondAttribute="bottom" id="CED-bp-AF3"/>
+                        <constraint firstItem="gQq-Gs-cJp" firstAttribute="top" secondItem="gga-OB-pAl" secondAttribute="top" id="CxS-Lw-WXy"/>
+                        <constraint firstItem="edj-OF-P0c" firstAttribute="top" secondItem="gga-OB-pAl" secondAttribute="top" id="Dzl-ou-Mea"/>
+                        <constraint firstAttribute="trailing" secondItem="gQq-Gs-cJp" secondAttribute="trailing" id="TPq-Aa-2lu"/>
+                        <constraint firstAttribute="trailing" secondItem="edj-OF-P0c" secondAttribute="trailing" id="ex2-V9-Hl2"/>
+                        <constraint firstAttribute="bottom" secondItem="gQq-Gs-cJp" secondAttribute="bottom" id="uWn-9H-Urk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-hk-lKU" userLabel="7">
+                    <rect key="frame" x="288.5" y="0.0" width="51.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cng-hD-rO5" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="-0.5" y="0.0" width="51.5" height="35"/>
+                            <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="chooseTextSizeAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="brC-a8-kev"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-wT-mKs" userLabel="line">
+                            <rect key="frame" x="50.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="LW1-DS-57C"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-H2-FbS">
+                            <rect key="frame" x="8" y="8" width="38.5" height="19"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WKImageEditor_up" translatesAutoresizingMaskIntoConstraints="NO" id="tsA-fX-hJ6">
+                            <rect key="frame" x="35.5" y="0.0" width="5" height="35"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="HNg-H2-FbS" firstAttribute="top" secondItem="cQb-hk-lKU" secondAttribute="top" constant="8" id="2Ix-AH-DLz"/>
+                        <constraint firstItem="KoN-wT-mKs" firstAttribute="leading" secondItem="tsA-fX-hJ6" secondAttribute="trailing" constant="10" id="3Ra-4V-X0h"/>
+                        <constraint firstItem="cng-hD-rO5" firstAttribute="height" secondItem="cQb-hk-lKU" secondAttribute="height" id="6qd-Hm-FTp"/>
+                        <constraint firstItem="tsA-fX-hJ6" firstAttribute="top" secondItem="cQb-hk-lKU" secondAttribute="top" id="7iQ-fp-GXF"/>
+                        <constraint firstAttribute="bottom" secondItem="KoN-wT-mKs" secondAttribute="bottom" id="CdJ-g6-2Kc"/>
+                        <constraint firstItem="cng-hD-rO5" firstAttribute="width" secondItem="cQb-hk-lKU" secondAttribute="width" id="QAy-aO-hby"/>
+                        <constraint firstItem="cng-hD-rO5" firstAttribute="centerX" secondItem="cQb-hk-lKU" secondAttribute="centerX" id="Qar-Di-3gR"/>
+                        <constraint firstAttribute="bottom" secondItem="tsA-fX-hJ6" secondAttribute="bottom" id="RNh-eP-Dd6"/>
+                        <constraint firstAttribute="bottom" secondItem="HNg-H2-FbS" secondAttribute="bottom" constant="8" id="TEb-mM-kka"/>
+                        <constraint firstAttribute="trailing" secondItem="KoN-wT-mKs" secondAttribute="trailing" id="lOW-fO-4IT"/>
+                        <constraint firstItem="KoN-wT-mKs" firstAttribute="leading" secondItem="HNg-H2-FbS" secondAttribute="trailing" constant="4" id="mfU-zF-mJE"/>
+                        <constraint firstItem="cng-hD-rO5" firstAttribute="centerY" secondItem="cQb-hk-lKU" secondAttribute="centerY" id="rOY-qF-iLH"/>
+                        <constraint firstItem="KoN-wT-mKs" firstAttribute="top" secondItem="cQb-hk-lKU" secondAttribute="top" id="uQk-fz-2Tc"/>
+                        <constraint firstItem="HNg-H2-FbS" firstAttribute="leading" secondItem="cQb-hk-lKU" secondAttribute="leading" constant="8" id="x4I-mo-Zlj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QZ-e5-qBl" userLabel="8">
+                    <rect key="frame" x="340" y="0.0" width="47.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uq-p8-kLM" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="35"/>
+                            <state key="normal" image="WKImageEditor_cancel"/>
+                            <connections>
+                                <action selector="backspaceAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="7RQ-zz-0O2"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12p-Wm-iy8" userLabel="line">
+                            <rect key="frame" x="46.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="XIq-2p-TWs"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="5uq-p8-kLM" firstAttribute="leading" secondItem="6QZ-e5-qBl" secondAttribute="leading" id="A9s-o7-yqa"/>
+                        <constraint firstAttribute="trailing" secondItem="12p-Wm-iy8" secondAttribute="trailing" id="Bz6-pL-4Bq"/>
+                        <constraint firstAttribute="bottom" secondItem="12p-Wm-iy8" secondAttribute="bottom" id="rbd-Ag-zbs"/>
+                        <constraint firstItem="12p-Wm-iy8" firstAttribute="top" secondItem="6QZ-e5-qBl" secondAttribute="top" id="rdA-jo-IBA"/>
+                        <constraint firstAttribute="bottom" secondItem="5uq-p8-kLM" secondAttribute="bottom" id="rja-ba-VxV"/>
+                        <constraint firstAttribute="trailing" secondItem="5uq-p8-kLM" secondAttribute="trailing" id="tGQ-d6-2ft"/>
+                        <constraint firstItem="5uq-p8-kLM" firstAttribute="top" secondItem="6QZ-e5-qBl" secondAttribute="top" id="uFn-39-RtW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-et-B8s" userLabel="删除">
+                    <rect key="frame" x="387.5" y="0.0" width="48.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="205-Rb-ie2" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="48.5" height="35"/>
+                            <state key="normal" image="WKImageEditor_delete"/>
+                            <connections>
+                                <action selector="clearAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="Qee-6s-tVc"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1X-VP-KE3" userLabel="line">
+                            <rect key="frame" x="47.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="EYE-AJ-bA7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="205-Rb-ie2" secondAttribute="bottom" id="9P2-gX-Wbt"/>
+                        <constraint firstItem="205-Rb-ie2" firstAttribute="leading" secondItem="EaS-et-B8s" secondAttribute="leading" id="AmH-ax-ODU"/>
+                        <constraint firstItem="s1X-VP-KE3" firstAttribute="top" secondItem="EaS-et-B8s" secondAttribute="top" id="Dln-rY-69z"/>
+                        <constraint firstAttribute="trailing" secondItem="205-Rb-ie2" secondAttribute="trailing" id="JeJ-Mn-kz9"/>
+                        <constraint firstItem="205-Rb-ie2" firstAttribute="top" secondItem="EaS-et-B8s" secondAttribute="top" id="UAd-Zi-lil"/>
+                        <constraint firstAttribute="bottom" secondItem="s1X-VP-KE3" secondAttribute="bottom" id="tau-ts-CG2"/>
+                        <constraint firstAttribute="trailing" secondItem="s1X-VP-KE3" secondAttribute="trailing" id="uf2-bg-zqO"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jz8-du-Qgk" userLabel="保存">
+                    <rect key="frame" x="436" y="0.0" width="91.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-40-Mh6" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="保存笔记"/>
+                            <connections>
+                                <action selector="saveAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="SdS-kx-ZDY"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6T-fR-Dok" userLabel="line">
+                            <rect key="frame" x="90.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="l00-d4-bzZ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="C6T-fR-Dok" secondAttribute="trailing" id="DtU-MC-IWa"/>
+                        <constraint firstItem="dR7-40-Mh6" firstAttribute="leading" secondItem="jz8-du-Qgk" secondAttribute="leading" id="ZYR-WB-YD5"/>
+                        <constraint firstAttribute="trailing" secondItem="dR7-40-Mh6" secondAttribute="trailing" id="ZeD-9y-hUN"/>
+                        <constraint firstAttribute="bottom" secondItem="dR7-40-Mh6" secondAttribute="bottom" id="gki-aF-3WX"/>
+                        <constraint firstItem="C6T-fR-Dok" firstAttribute="top" secondItem="jz8-du-Qgk" secondAttribute="top" id="qSe-6e-W4p"/>
+                        <constraint firstAttribute="bottom" secondItem="C6T-fR-Dok" secondAttribute="bottom" id="xV4-s6-gXf"/>
+                        <constraint firstItem="dR7-40-Mh6" firstAttribute="top" secondItem="jz8-du-Qgk" secondAttribute="top" id="zEd-oI-Rfm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxP-YV-XY6" userLabel="6">
+                    <rect key="frame" x="527.5" y="0.0" width="53.5" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUk-x7-6MI" customClass="WKImageEditorToolBarButton">
+                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="35"/>
+                            <state key="normal" image="WKImageEditor_arrow"/>
+                            <connections>
+                                <action selector="packUpAction:" destination="SWu-dz-1Hy" eventType="touchUpInside" id="G93-nf-JX2"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ld-Gc-mUl" userLabel="line">
+                            <rect key="frame" x="52.5" y="0.0" width="1" height="35"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="mIq-N6-Kj5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7Ld-Gc-mUl" secondAttribute="trailing" id="3nb-dc-wS6"/>
+                        <constraint firstAttribute="trailing" secondItem="vUk-x7-6MI" secondAttribute="trailing" id="83z-Va-lfo"/>
+                        <constraint firstItem="vUk-x7-6MI" firstAttribute="leading" secondItem="QxP-YV-XY6" secondAttribute="leading" id="Q8C-s4-0Qg"/>
+                        <constraint firstAttribute="bottom" secondItem="vUk-x7-6MI" secondAttribute="bottom" id="ROA-Yp-XjS"/>
+                        <constraint firstAttribute="bottom" secondItem="7Ld-Gc-mUl" secondAttribute="bottom" id="TN0-BF-PsP"/>
+                        <constraint firstItem="7Ld-Gc-mUl" firstAttribute="top" secondItem="QxP-YV-XY6" secondAttribute="top" id="V03-ru-deb"/>
+                        <constraint firstItem="vUk-x7-6MI" firstAttribute="top" secondItem="QxP-YV-XY6" secondAttribute="top" id="eMO-K2-gdH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SgZ-pq-Nf4" firstAttribute="leading" secondItem="s9s-ZX-SX1" secondAttribute="trailing" id="2QX-tW-Jxa"/>
+                <constraint firstAttribute="bottom" secondItem="PDY-qz-oxy" secondAttribute="bottom" id="5HF-sA-y4n"/>
+                <constraint firstItem="gga-OB-pAl" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="5Xt-Xb-zQg"/>
+                <constraint firstItem="6QZ-e5-qBl" firstAttribute="top" secondItem="gga-OB-pAl" secondAttribute="top" id="5Zi-9L-zvM"/>
+                <constraint firstItem="gSb-Ef-EVr" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="5gU-E4-dG6"/>
+                <constraint firstAttribute="bottom" secondItem="SgZ-pq-Nf4" secondAttribute="bottom" id="5la-Pz-i82"/>
+                <constraint firstAttribute="bottom" secondItem="gSb-Ef-EVr" secondAttribute="bottom" id="6LJ-zW-HiA"/>
+                <constraint firstItem="6QZ-e5-qBl" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="6eO-m0-QOt"/>
+                <constraint firstItem="jz8-du-Qgk" firstAttribute="width" secondItem="SWu-dz-1Hy" secondAttribute="width" multiplier="98:622" id="6va-Pl-yNM"/>
+                <constraint firstItem="PDY-qz-oxy" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="6yu-It-Ug3"/>
+                <constraint firstItem="gga-OB-pAl" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="7VI-JJ-zK5"/>
+                <constraint firstItem="YuQ-vz-Nen" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="8qL-YT-ovs"/>
+                <constraint firstItem="PDY-qz-oxy" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="AiD-ni-jQ4"/>
+                <constraint firstItem="jz8-du-Qgk" firstAttribute="leading" secondItem="EaS-et-B8s" secondAttribute="trailing" id="BfT-nX-OBs"/>
+                <constraint firstItem="6QZ-e5-qBl" firstAttribute="bottom" secondItem="gga-OB-pAl" secondAttribute="bottom" id="Ivr-ih-RKl"/>
+                <constraint firstItem="EaS-et-B8s" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="Kj8-aX-b3X"/>
+                <constraint firstItem="gga-OB-pAl" firstAttribute="leading" secondItem="gSb-Ef-EVr" secondAttribute="trailing" id="KlK-Vu-EDX"/>
+                <constraint firstItem="s9s-ZX-SX1" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="Kmp-K8-opl"/>
+                <constraint firstItem="SgZ-pq-Nf4" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="Lzh-fx-52m"/>
+                <constraint firstItem="jz8-du-Qgk" firstAttribute="top" secondItem="EaS-et-B8s" secondAttribute="top" id="MSI-e2-oAh"/>
+                <constraint firstItem="cQb-hk-lKU" firstAttribute="top" secondItem="gga-OB-pAl" secondAttribute="top" id="OBK-bh-SCc"/>
+                <constraint firstItem="6QZ-e5-qBl" firstAttribute="leading" secondItem="cQb-hk-lKU" secondAttribute="trailing" id="PW9-2H-2zw"/>
+                <constraint firstItem="YuQ-vz-Nen" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="Qtt-9J-x1u"/>
+                <constraint firstItem="QxP-YV-XY6" firstAttribute="top" secondItem="jz8-du-Qgk" secondAttribute="top" id="RNd-3o-7uH"/>
+                <constraint firstItem="EaS-et-B8s" firstAttribute="leading" secondItem="6QZ-e5-qBl" secondAttribute="trailing" id="SuI-dr-1Nq"/>
+                <constraint firstItem="s9s-ZX-SX1" firstAttribute="height" secondItem="SWu-dz-1Hy" secondAttribute="height" id="Tx9-4f-7bq"/>
+                <constraint firstItem="EaS-et-B8s" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="Ufg-J0-dZt"/>
+                <constraint firstItem="gSb-Ef-EVr" firstAttribute="leading" secondItem="YuQ-vz-Nen" secondAttribute="trailing" id="VMq-cb-rMI"/>
+                <constraint firstItem="SgZ-pq-Nf4" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="VUp-9N-Viw"/>
+                <constraint firstItem="QxP-YV-XY6" firstAttribute="leading" secondItem="jz8-du-Qgk" secondAttribute="trailing" id="W9I-SD-MbU"/>
+                <constraint firstItem="YuQ-vz-Nen" firstAttribute="leading" secondItem="PDY-qz-oxy" secondAttribute="trailing" id="W9g-6B-OvY"/>
+                <constraint firstItem="gSb-Ef-EVr" firstAttribute="width" secondItem="s9s-ZX-SX1" secondAttribute="width" id="Wlr-4f-18h"/>
+                <constraint firstAttribute="bottom" secondItem="s9s-ZX-SX1" secondAttribute="bottom" id="Xah-TW-dkg"/>
+                <constraint firstAttribute="trailing" secondItem="QxP-YV-XY6" secondAttribute="trailing" id="ZAf-Ly-Pnt"/>
+                <constraint firstItem="cQb-hk-lKU" firstAttribute="leading" secondItem="gga-OB-pAl" secondAttribute="trailing" id="amH-yE-YoL"/>
+                <constraint firstItem="gSb-Ef-EVr" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="bd5-Td-4ce"/>
+                <constraint firstItem="gga-OB-pAl" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="eC9-Bq-a6G"/>
+                <constraint firstItem="EaS-et-B8s" firstAttribute="bottom" secondItem="6QZ-e5-qBl" secondAttribute="bottom" id="eyE-ER-af3"/>
+                <constraint firstItem="QxP-YV-XY6" firstAttribute="height" secondItem="gga-OB-pAl" secondAttribute="height" id="htg-LI-T8C"/>
+                <constraint firstItem="s9s-ZX-SX1" firstAttribute="width" secondItem="SWu-dz-1Hy" secondAttribute="width" multiplier="52:622" id="kW5-Pm-vpA"/>
+                <constraint firstItem="YuQ-vz-Nen" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="pr2-Ar-tt3"/>
+                <constraint firstAttribute="bottom" secondItem="YuQ-vz-Nen" secondAttribute="bottom" id="sLL-8I-vX3"/>
+                <constraint firstItem="PDY-qz-oxy" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="seu-QF-nK2"/>
+                <constraint firstItem="EaS-et-B8s" firstAttribute="top" secondItem="6QZ-e5-qBl" secondAttribute="top" id="siY-EK-dMf"/>
+                <constraint firstItem="cQb-hk-lKU" firstAttribute="bottom" secondItem="gga-OB-pAl" secondAttribute="bottom" id="te0-DV-tRU"/>
+                <constraint firstItem="6QZ-e5-qBl" firstAttribute="height" secondItem="s9s-ZX-SX1" secondAttribute="height" id="vNB-YZ-hVG"/>
+                <constraint firstItem="PDY-qz-oxy" firstAttribute="leading" secondItem="SgZ-pq-Nf4" secondAttribute="trailing" id="vf2-4L-skK"/>
+                <constraint firstAttribute="bottom" secondItem="gga-OB-pAl" secondAttribute="bottom" id="whn-KE-bU9"/>
+                <constraint firstItem="SgZ-pq-Nf4" firstAttribute="top" secondItem="SWu-dz-1Hy" secondAttribute="top" id="xvN-tj-brH"/>
+                <constraint firstItem="cQb-hk-lKU" firstAttribute="width" secondItem="SWu-dz-1Hy" secondAttribute="width" multiplier="56:622" id="ykM-nA-cZ6"/>
+                <constraint firstItem="s9s-ZX-SX1" firstAttribute="leading" secondItem="SWu-dz-1Hy" secondAttribute="leading" id="z1k-ws-Ogg"/>
+                <constraint firstItem="jz8-du-Qgk" firstAttribute="bottom" secondItem="EaS-et-B8s" secondAttribute="bottom" id="zF5-Ba-y05"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="chooseColorButton" destination="G92-EG-vFt" id="5zZ-Nf-Yr2"/>
+                <outlet property="textSizeLabel" destination="HNg-H2-FbS" id="EVP-Aw-YHa"/>
+            </connections>
+            <point key="canvasLocation" x="123.5" y="-24.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WKImageEditor_arrow" width="18" height="18"/>
+        <image name="WKImageEditor_cancel" width="18" height="18"/>
+        <image name="WKImageEditor_color" width="18" height="18"/>
+        <image name="WKImageEditor_delete" width="18" height="18"/>
+        <image name="WKImageEditor_line_1" width="18" height="18"/>
+        <image name="WKImageEditor_line_2" width="18" height="18"/>
+        <image name="WKImageEditor_shape_1" width="18" height="18"/>
+        <image name="WKImageEditor_shape_2" width="18" height="18"/>
+        <image name="WKImageEditor_text" width="18" height="18"/>
+        <image name="WKImageEditor_up" width="5" height="3"/>
+    </resources>
+</document>

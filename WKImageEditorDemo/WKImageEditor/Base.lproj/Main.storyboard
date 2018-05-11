@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,81 +15,87 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5i-wY-tIv" customClass="WKImageEditorScrollView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbq-XZ-EdS">
-                                <rect key="frame" x="-10" y="637" width="394" height="30"/>
+                                <rect key="frame" x="154.5" y="345" width="358" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NFH-yP-nHT">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsp-Om-bKM">
-                                                <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="c0k-2g-7Yj"/>
-                                                </constraints>
-                                                <state key="normal" title="直线"/>
-                                                <connections>
-                                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yq-75-SLP"/>
-                                                </connections>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZS-Ny-JC9">
+                                                <rect key="frame" x="0.0" y="0.0" width="18" height="30"/>
+                                                <state key="normal" image="WKImageEditor_color"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-X8-4e9">
-                                                <rect key="frame" x="41" y="0.0" width="31" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Lsh-6A-81H"/>
-                                                </constraints>
-                                                <state key="normal" title="曲线"/>
-                                                <connections>
-                                                    <action selector="drawBezier:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnf-ys-zbo"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLu-L5-l7U">
-                                                <rect key="frame" x="82" y="0.0" width="31" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLu-L5-l7U">
+                                                <rect key="frame" x="28" y="0.0" width="18" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="wYR-JR-hRx"/>
                                                 </constraints>
-                                                <state key="normal" title="矩形"/>
+                                                <state key="normal" image="WKImageEditor_shape_1"/>
                                                 <connections>
                                                     <action selector="drawRect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgr-Ea-jGC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVP-br-m2o">
-                                                <rect key="frame" x="123" y="0.0" width="31" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVP-br-m2o">
+                                                <rect key="frame" x="56" y="0.0" width="18" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BmB-V2-jYB"/>
                                                 </constraints>
-                                                <state key="normal" title="圆形"/>
+                                                <state key="normal" image="WKImageEditor_shape_2"/>
                                                 <connections>
                                                     <action selector="drawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cU-cR-90M"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-mf-rBL">
-                                                <rect key="frame" x="164" y="0.0" width="31" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsp-Om-bKM">
+                                                <rect key="frame" x="84" y="0.0" width="18" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="c0k-2g-7Yj"/>
+                                                </constraints>
+                                                <state key="normal" image="WKImageEditor_line_1"/>
+                                                <connections>
+                                                    <action selector="drawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yq-75-SLP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-X8-4e9">
+                                                <rect key="frame" x="112" y="0.0" width="18" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Lsh-6A-81H"/>
+                                                </constraints>
+                                                <state key="normal" image="WKImageEditor_line_2"/>
+                                                <connections>
+                                                    <action selector="drawBezier:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnf-ys-zbo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-33-y33">
+                                                <rect key="frame" x="140" y="0.0" width="18" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="WNI-Af-Yzs"/>
+                                                </constraints>
+                                                <state key="normal" image="WKImageEditor_text"/>
+                                                <connections>
+                                                    <action selector="addText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2t-yC-oTo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2L-mf-rBL">
+                                                <rect key="frame" x="168" y="0.0" width="18" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GiV-gH-QQP"/>
                                                 </constraints>
-                                                <state key="normal" title="撤销"/>
+                                                <state key="normal" image="WKImageEditor_cancel"/>
                                                 <connections>
                                                     <action selector="Backspace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uol-x7-Jgb"/>
                                                     <action selector="drawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vR1-YM-zBt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5O-33-y33">
-                                                <rect key="frame" x="205" y="0.0" width="31" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="WNI-Af-Yzs"/>
-                                                </constraints>
-                                                <state key="normal" title="文字"/>
-                                                <connections>
-                                                    <action selector="addText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2t-yC-oTo"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXa-wT-QRi">
-                                                <rect key="frame" x="246" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="196" y="0.0" width="62" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="zA9-an-Mad"/>
                                                 </constraints>
@@ -98,30 +104,31 @@
                                                     <action selector="endEditImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUN-tc-6wY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-Fh-tv0" userLabel="clear">
-                                                <rect key="frame" x="318" y="0.0" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-Fh-tv0" userLabel="clear">
+                                                <rect key="frame" x="268" y="0.0" width="18" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ape-Zu-fqd"/>
                                                 </constraints>
-                                                <state key="normal" title="clear"/>
+                                                <state key="normal" image="WKImageEditor_delete"/>
                                                 <connections>
                                                     <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4SB-yE-iUg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szd-7q-LXl" userLabel="clear">
-                                                <rect key="frame" x="362" y="0.0" width="32" height="30"/>
+                                                <rect key="frame" x="296" y="0.0" width="62" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="w71-eS-bVv"/>
                                                 </constraints>
-                                                <state key="normal" title="save"/>
+                                                <state key="normal" title="截屏上传"/>
                                                 <connections>
                                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4r-6q-jfV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.86027689780000005" green="0.86071092559999995" blue="0.85892056100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="NFH-yP-nHT" firstAttribute="top" secondItem="Tbq-XZ-EdS" secondAttribute="top" id="J3z-iN-CvH"/>
                                     <constraint firstAttribute="trailing" secondItem="NFH-yP-nHT" secondAttribute="trailing" id="Nbx-vk-XxJ"/>
@@ -140,6 +147,12 @@
                             <constraint firstItem="Z5i-wY-tIv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u5k-l8-Sfj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Z5i-wY-tIv"/>
+                                <exclude reference="Tbq-XZ-EdS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="scorllView" destination="Z5i-wY-tIv" id="Evg-3f-MYN"/>
@@ -150,4 +163,14 @@
             <point key="canvasLocation" x="32.799999999999997" y="80.50974512743629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WKImageEditor_cancel" width="18" height="18"/>
+        <image name="WKImageEditor_color" width="18" height="18"/>
+        <image name="WKImageEditor_delete" width="18" height="18"/>
+        <image name="WKImageEditor_line_1" width="18" height="18"/>
+        <image name="WKImageEditor_line_2" width="18" height="18"/>
+        <image name="WKImageEditor_shape_1" width="18" height="18"/>
+        <image name="WKImageEditor_shape_2" width="18" height="18"/>
+        <image name="WKImageEditor_text" width="18" height="18"/>
+    </resources>
 </document>

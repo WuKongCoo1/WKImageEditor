@@ -16,6 +16,11 @@
 		67240B0F209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B06209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m */; };
 		67240B10209AF6F7006A3E98 /* WKImageEditorScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */; };
 		67240B11209AF6F7006A3E98 /* WKImageEditorTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */; };
+		679CE12020A3F91A00154F21 /* WKImageEditorToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE11F20A3F91A00154F21 /* WKImageEditorToolBar.m */; };
+		679CE12220A3F94D00154F21 /* WKImageEditorToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679CE12120A3F94D00154F21 /* WKImageEditorToolBar.xib */; };
+		679CE12520A4276000154F21 /* WKImageEditorToolBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE12420A4276000154F21 /* WKImageEditorToolBarButton.m */; };
+		679CE12820A438DC00154F21 /* WKImageEditorChooseColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE12720A438DC00154F21 /* WKImageEditorChooseColorView.m */; };
+		679CE12D20A4461E00154F21 /* UIButton+WKBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE12B20A4461D00154F21 /* UIButton+WKBlock.m */; };
 		67D65C9E2073653900EF16DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65C9D2073653900EF16DC /* AppDelegate.m */; };
 		67D65CA12073653900EF16DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65CA02073653900EF16DC /* ViewController.m */; };
 		67D65CA42073653900EF16DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D65CA22073653900EF16DC /* Main.storyboard */; };
@@ -24,6 +29,8 @@
 		67D65CAC2073653900EF16DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65CAB2073653900EF16DC /* main.m */; };
 		67D65CB62073653900EF16DC /* WKImageEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65CB52073653900EF16DC /* WKImageEditorTests.m */; };
 		67D65CC12073653900EF16DC /* WKImageEditorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D65CC02073653900EF16DC /* WKImageEditorUITests.m */; };
+		67F9D5A120A583D2007FC2CB /* UIImage+WKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F9D5A020A583D2007FC2CB /* UIImage+WKColor.m */; };
+		67F9D5A420A5863C007FC2CB /* WKImageEditorChooseTextSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F9D5A320A5863C007FC2CB /* WKImageEditorChooseTextSizeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,15 @@
 		67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorScrollView.m; sourceTree = "<group>"; };
 		67240B0A209AF6F7006A3E98 /* WKImageEditorTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorTextView.h; sourceTree = "<group>"; };
 		67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorTextView.m; sourceTree = "<group>"; };
+		679CE11E20A3F91A00154F21 /* WKImageEditorToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKImageEditorToolBar.h; sourceTree = "<group>"; };
+		679CE11F20A3F91A00154F21 /* WKImageEditorToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorToolBar.m; sourceTree = "<group>"; };
+		679CE12120A3F94D00154F21 /* WKImageEditorToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKImageEditorToolBar.xib; sourceTree = "<group>"; };
+		679CE12320A4276000154F21 /* WKImageEditorToolBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKImageEditorToolBarButton.h; sourceTree = "<group>"; };
+		679CE12420A4276000154F21 /* WKImageEditorToolBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorToolBarButton.m; sourceTree = "<group>"; };
+		679CE12620A438DC00154F21 /* WKImageEditorChooseColorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKImageEditorChooseColorView.h; sourceTree = "<group>"; };
+		679CE12720A438DC00154F21 /* WKImageEditorChooseColorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorChooseColorView.m; sourceTree = "<group>"; };
+		679CE12B20A4461D00154F21 /* UIButton+WKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WKBlock.m"; sourceTree = "<group>"; };
+		679CE12C20A4461D00154F21 /* UIButton+WKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WKBlock.h"; sourceTree = "<group>"; };
 		67D65C992073653900EF16DC /* WKImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D65C9C2073653900EF16DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67D65C9D2073653900EF16DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +95,10 @@
 		67D65CC02073653900EF16DC /* WKImageEditorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorUITests.m; sourceTree = "<group>"; };
 		67D65CC22073653900EF16DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67F321D07688AC4692CAAB52 /* Pods-WKImageEditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditorUITests/Pods-WKImageEditorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		67F9D59F20A583D2007FC2CB /* UIImage+WKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WKColor.h"; sourceTree = "<group>"; };
+		67F9D5A020A583D2007FC2CB /* UIImage+WKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WKColor.m"; sourceTree = "<group>"; };
+		67F9D5A220A5863C007FC2CB /* WKImageEditorChooseTextSizeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKImageEditorChooseTextSizeView.h; sourceTree = "<group>"; };
+		67F9D5A320A5863C007FC2CB /* WKImageEditorChooseTextSizeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorChooseTextSizeView.m; sourceTree = "<group>"; };
 		8CB6989AF861F1542789D8C5 /* Pods-WKImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditor/Pods-WKImageEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		8E66A75E5AF2F954550675D7 /* libPods-WKImageEditorUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WKImageEditorUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EDF532F5D785B142E09B2C6 /* libPods-WKImageEditorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WKImageEditorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +148,10 @@
 		67240B00209AF6F7006A3E98 /* WKImageEditorTools */ = {
 			isa = PBXGroup;
 			children = (
+				67F9D59F20A583D2007FC2CB /* UIImage+WKColor.h */,
+				67F9D5A020A583D2007FC2CB /* UIImage+WKColor.m */,
+				679CE12C20A4461D00154F21 /* UIButton+WKBlock.h */,
+				679CE12B20A4461D00154F21 /* UIButton+WKBlock.m */,
 				67240B01209AF6F7006A3E98 /* UIImage+Resize.h */,
 				67240B02209AF6F7006A3E98 /* UIImage+Resize.m */,
 				67240B03209AF6F7006A3E98 /* WKImageEditorDrawTool.h */,
@@ -139,6 +163,15 @@
 				67240B09209AF6F7006A3E98 /* WKImageEditorScrollView.m */,
 				67240B0A209AF6F7006A3E98 /* WKImageEditorTextView.h */,
 				67240B0B209AF6F7006A3E98 /* WKImageEditorTextView.m */,
+				679CE11E20A3F91A00154F21 /* WKImageEditorToolBar.h */,
+				679CE11F20A3F91A00154F21 /* WKImageEditorToolBar.m */,
+				679CE12120A3F94D00154F21 /* WKImageEditorToolBar.xib */,
+				679CE12320A4276000154F21 /* WKImageEditorToolBarButton.h */,
+				679CE12420A4276000154F21 /* WKImageEditorToolBarButton.m */,
+				679CE12620A438DC00154F21 /* WKImageEditorChooseColorView.h */,
+				679CE12720A438DC00154F21 /* WKImageEditorChooseColorView.m */,
+				67F9D5A220A5863C007FC2CB /* WKImageEditorChooseTextSizeView.h */,
+				67F9D5A320A5863C007FC2CB /* WKImageEditorChooseTextSizeView.m */,
 			);
 			path = WKImageEditorTools;
 			sourceTree = "<group>";
@@ -234,6 +267,8 @@
 				67D65C952073653900EF16DC /* Sources */,
 				67D65C962073653900EF16DC /* Frameworks */,
 				67D65C972073653900EF16DC /* Resources */,
+				E7D3C7210583C4A293846329 /* [CP] Embed Pods Frameworks */,
+				4AC5F7D998DA80127EA723BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +287,8 @@
 				67D65CAD2073653900EF16DC /* Sources */,
 				67D65CAE2073653900EF16DC /* Frameworks */,
 				67D65CAF2073653900EF16DC /* Resources */,
+				C4CA0DF6E69AF472D2AF17F9 /* [CP] Embed Pods Frameworks */,
+				554A5131C5FFA5D441A97462 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +308,8 @@
 				67D65CB82073653900EF16DC /* Sources */,
 				67D65CB92073653900EF16DC /* Frameworks */,
 				67D65CBA2073653900EF16DC /* Resources */,
+				1C41CC5BDF52EA89E0BE9778 /* [CP] Embed Pods Frameworks */,
+				0CF78566654F0F3E33E1EB9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679CE12220A3F94D00154F21 /* WKImageEditorToolBar.xib in Resources */,
 				67D65CA92073653900EF16DC /* LaunchScreen.storyboard in Resources */,
 				67D65CA62073653900EF16DC /* Assets.xcassets in Resources */,
 				67D65CA42073653900EF16DC /* Main.storyboard in Resources */,
@@ -356,6 +396,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CF78566654F0F3E33E1EB9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditorUITests/Pods-WKImageEditorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C41CC5BDF52EA89E0BE9778 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditorUITests/Pods-WKImageEditorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC5F7D998DA80127EA723BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditor/Pods-WKImageEditor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5150CC095D662B038A03DF41 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,7 +456,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		554A5131C5FFA5D441A97462 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditorTests/Pods-WKImageEditorTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D2F99E795100B10B14D3711 /* [CP] Check Pods Manifest.lock */ = {
@@ -389,7 +489,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4CA0DF6E69AF472D2AF17F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditorTests/Pods-WKImageEditorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D3C7210583C4A293846329 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKImageEditor/Pods-WKImageEditor-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDE5663FD877331E1D6A6400 /* [CP] Check Pods Manifest.lock */ = {
@@ -407,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -417,12 +547,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679CE12820A438DC00154F21 /* WKImageEditorChooseColorView.m in Sources */,
 				67240B0C209AF6F7006A3E98 /* WKImageEditorEditContainer.m in Sources */,
+				67F9D5A420A5863C007FC2CB /* WKImageEditorChooseTextSizeView.m in Sources */,
 				67240B0F209AF6F7006A3E98 /* WKImageEditorInputTextViewContainer.m in Sources */,
 				67240B10209AF6F7006A3E98 /* WKImageEditorScrollView.m in Sources */,
 				67D65CA12073653900EF16DC /* ViewController.m in Sources */,
+				67F9D5A120A583D2007FC2CB /* UIImage+WKColor.m in Sources */,
+				679CE12520A4276000154F21 /* WKImageEditorToolBarButton.m in Sources */,
+				679CE12D20A4461E00154F21 /* UIButton+WKBlock.m in Sources */,
 				67D65CAC2073653900EF16DC /* main.m in Sources */,
 				67D65C9E2073653900EF16DC /* AppDelegate.m in Sources */,
+				679CE12020A3F91A00154F21 /* WKImageEditorToolBar.m in Sources */,
 				67240B0E209AF6F7006A3E98 /* WKImageEditorDrawTool.m in Sources */,
 				67240B0D209AF6F7006A3E98 /* UIImage+Resize.m in Sources */,
 				67240B11209AF6F7006A3E98 /* WKImageEditorTextView.m in Sources */,

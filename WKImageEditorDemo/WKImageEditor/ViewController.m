@@ -12,11 +12,17 @@
 #import "WKImageEditorInputTextViewContainer.h"
 #import <Masonry/Masonry.h>
 #import "WKImageEditorEditContainer.h"
+#import "WKImageEditorToolBar.h"
+#import "WKImageEditorChooseColorView.h"
+#import "WKImageEditorChooseTextSizeView.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet WKImageEditorScrollView *scorllView;
 @property (strong, nonatomic) WKImageEditorEditContainer *container;
+@property (strong, nonatomic) WKImageEditorChooseColorView *chooseColorView;
+@property (strong, nonatomic) WKImageEditorToolBar *toolBar;
+@property (strong, nonatomic) WKImageEditorChooseTextSizeView *chooseTextSizeView;
 
 - (IBAction)drawLine:(id)sender;
 - (IBAction)drawBezier:(id)sender;
@@ -63,22 +69,127 @@
     
     WKImageEditorEditContainer *container = ({
         WKImageEditorEditContainer *c = [WKImageEditorEditContainer imageEditorEditContainerWithUrl:@"http://xxyx-test.oss-cn-qingdao.aliyuncs.com///answercard/6786d07bc00e4c5d92523dc2b6c05c5b.jpg"];
-//        c = [WKImageEditorEditContainer imageEditorEditContainerWithImage:[UIImage imageNamed:@"22222"]];
         [self.view addSubview:c];
-        
         [c mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
         }];
-        
         c;
     });
+    
     
     self.container = container;
     container.OperateType = WKImageEditOperateTypeBaseOnOriginalImage;
     
-    container.drawColor = [UIColor redColor];
+    container.drawColor = [UIColor purpleColor];
+    container.drawFont = [UIFont systemFontOfSize:14.f];
     
     [self.view sendSubviewToBack:container];
+    
+    //工具栏
+    WKImageEditorToolBar *toolBar = [WKImageEditorToolBar imageEditorToolBar];
+    __weak typeof(self)weakSelf = self;
+    toolBar.operateBlock = ^(WKImageEditorToolBarOperateType type) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        switch (type) {
+            //绘制
+            case WKImageEditorToolBarOperateTypeDrawLine:
+                [strongSelf.container beginEditing:WKImageEditTypeLine];
+                break;
+            case WKImageEditorToolBarOperateTypeDrawRect:
+                [strongSelf.container beginEditing:WKImageEditTypeRect];
+                break;
+            case WKImageEditorToolBarOperateTypeDrawText:
+                [strongSelf.container beginEditing:WKImageEditTypeText];
+                break;
+            case WKImageEditorToolBarOperateTypeDrawBezier:
+                [strongSelf.container beginEditing:WKImageEditTypeBezier];
+                break;
+            case WKImageEditorToolBarOperateTypeDrawCircle:
+                [strongSelf.container beginEditing:WKImageEditTypeCircle];
+                break;
+            case WKImageEditorToolBarOperateTypeBackspace:
+                [strongSelf.container rollback];
+                break;
+            case WKImageEditorToolBarOperateTypeSave:
+                [strongSelf.container  resultImage:^(UIImage *image) {
+                    
+                }];
+                break;
+            case WKImageEditorToolBarOperateTypeClear:
+                [strongSelf.container clear];
+                break;
+                //功能性
+            case WKImageEditorToolBarOperateTypeChooseColor:
+                strongSelf.chooseColorView.hidden = !strongSelf.chooseColorView.hidden;
+                break;
+            case WKImageEditorToolBarOperateTypePackUp:
+                
+                break;
+            case WKImageEditorToolBarOperateTypeUnpack:
+                
+                break;
+            
+            case WKImageEditorToolBarOperateTypeChooseTextSize:
+                strongSelf.chooseTextSizeView.hidden = !strongSelf.chooseTextSizeView.hidden;
+                break;
+                
+            default:
+                break;
+        }
+    };
+    
+    [self.view addSubview:toolBar];
+    [toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view);
+        make.height.equalTo(@50);
+        make.left.right.equalTo(self.view);
+    }];
+
+    [toolBar setFontSize:14.f];
+    
+    self.toolBar = toolBar;
+
+    //选择颜色
+    WKImageEditorChooseColorView *colorView = [[WKImageEditorChooseColorView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview: colorView];
+    [colorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@40);
+        make.top.equalTo(self.view);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@400.f);
+    }];
+    
+    colorView.didChooseColor = ^(UIColor *color) {
+      __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.container setDrawColor:color];
+        [strongSelf.toolBar setDrawColor:color];
+    };
+    
+    colorView.hidden = YES;
+    self.chooseColorView = colorView;
+    
+    //选择字体大小
+    WKImageEditorChooseTextSizeView *chooseTextSizeView = [[WKImageEditorChooseTextSizeView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview: chooseTextSizeView];
+    
+    [chooseTextSizeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@300.f);
+        make.top.equalTo(colorView.mas_bottom).offset(5.f);
+        make.left.equalTo(colorView);
+        make.height.equalTo(@30);
+    }];
+    
+    chooseTextSizeView.didChooseFontSize = ^(CGFloat fontSize) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.container setDrawFont:[UIFont systemFontOfSize:fontSize]];
+        [strongSelf.toolBar setFontSize:fontSize];
+    };
+    
+    chooseTextSizeView.hidden = YES;
+    
+    self.chooseTextSizeView = chooseTextSizeView;
+    
+    
 }
 
 
@@ -120,6 +231,7 @@
 
 - (IBAction)endEditImage:(id)sender {
     [self.container endEditing];
+    self.container.drawFont = [UIFont systemFontOfSize:(self.container.drawFont.pointSize + 5)];
 }
 - (IBAction)clear:(id)sender {
     [self.container clear];
