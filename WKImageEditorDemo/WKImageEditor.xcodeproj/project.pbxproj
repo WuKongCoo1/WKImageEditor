@@ -10,7 +10,7 @@
 		259F8F227AD761C5C0CA5E75 /* libPods-WKImageEditor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D29342E4CB5DB0151FA427 /* libPods-WKImageEditor.a */; };
 		50C9EC295284832715A7C321 /* libPods-WKImageEditorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E66A75E5AF2F954550675D7 /* libPods-WKImageEditorUITests.a */; };
 		54CDC1DB21E4034A0B0915CA /* libPods-WKImageEditorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDF532F5D785B142E09B2C6 /* libPods-WKImageEditorTests.a */; };
-		6713903020A967F90089099B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6713902F20A967F80089099B /* Assets.xcassets */; };
+		6713907020A98F910089099B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6713906F20A98F910089099B /* Assets.xcassets */; };
 		67240B0C209AF6F7006A3E98 /* WKImageEditorEditContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240AFF209AF6F7006A3E98 /* WKImageEditorEditContainer.m */; };
 		67240B0D209AF6F7006A3E98 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B02209AF6F7006A3E98 /* UIImage+Resize.m */; };
 		67240B0E209AF6F7006A3E98 /* WKImageEditorDrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67240B04209AF6F7006A3E98 /* WKImageEditorDrawTool.m */; };
@@ -55,7 +55,7 @@
 		472D7174D7E358811C8BB911 /* Pods-WKImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditor/Pods-WKImageEditor.release.xcconfig"; sourceTree = "<group>"; };
 		5FD5D9B19E10EB87543983EC /* Pods-WKImageEditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKImageEditorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKImageEditorTests/Pods-WKImageEditorTests.release.xcconfig"; sourceTree = "<group>"; };
 		63D29342E4CB5DB0151FA427 /* libPods-WKImageEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WKImageEditor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6713902F20A967F80089099B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../WKImageEditor/Assets.xcassets; sourceTree = "<group>"; };
+		6713906F20A98F910089099B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../WKImageEditor/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		67240AFD209AF6F7006A3E98 /* WKImageEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditor.h; sourceTree = "<group>"; };
 		67240AFE209AF6F7006A3E98 /* WKImageEditorEditContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageEditorEditContainer.h; sourceTree = "<group>"; };
 		67240AFF209AF6F7006A3E98 /* WKImageEditorEditContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageEditorEditContainer.m; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		67D65C9B2073653900EF16DC /* WKImageEditor */ = {
 			isa = PBXGroup;
 			children = (
-				6713902F20A967F80089099B /* Assets.xcassets */,
+				6713906F20A98F910089099B /* Assets.xcassets */,
 				67240AFC209AF6F7006A3E98 /* WKImageEditor */,
 				67D65C9C2073653900EF16DC /* AppDelegate.h */,
 				67D65C9D2073653900EF16DC /* AppDelegate.m */,
@@ -374,7 +374,7 @@
 			files = (
 				679CE12220A3F94D00154F21 /* WKImageEditorToolBar.xib in Resources */,
 				67D65CA92073653900EF16DC /* LaunchScreen.storyboard in Resources */,
-				6713903020A967F90089099B /* Assets.xcassets in Resources */,
+				6713907020A98F910089099B /* Assets.xcassets in Resources */,
 				67D65CA42073653900EF16DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
