@@ -66,10 +66,10 @@
 //    [container beginInputText];
     
     [self.scorllView removeFromSuperview];
-    
+//    http://xxyx-test.oss-cn-qingdao.aliyuncs.com///answercard/6786d07bc00e4c5d92523dc2b6c05c5b.jpg
     
     WKImageEditorEditContainer *container = ({
-        WKImageEditorEditContainer *c = [WKImageEditorEditContainer imageEditorEditContainerWithUrl:@"http://xxyx-test.oss-cn-qingdao.aliyuncs.com///answercard/6786d07bc00e4c5d92523dc2b6c05c5b.jpg"];
+        WKImageEditorEditContainer *c = [WKImageEditorEditContainer imageEditorEditContainerWithUrl:@"http://sjsh-test.img-cn-hangzhou.aliyuncs.com/upload_mes_img/637/oss-FF3225AB-56EE-4C42-901A-10E8ED513256_1001.00_1500.00.jpg"];
         [self.view addSubview:c];
         [c mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);

@@ -393,7 +393,7 @@ WKImageEditorDrawToolDataSource
         zoomScale = MIN(MAX(self.minimumZoomScale, zoomScale), self.maximumZoomScale);
     }
     
-    return zoomScale <= 0 ? 1 : zoomScale;
+    return zoomScale;
 }
 
 - (void)layoutSubviews
@@ -427,9 +427,8 @@ WKImageEditorDrawToolDataSource
 #pragma mark - private mehtod
 - (void)completeLoadOriginalImage:(UIImage *)image completeBlock:(void (^)(UIImage *))completeBlock
 {
-    [self setImage:image];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setImage:image];
     });
     if (completeBlock) {
         completeBlock(image);

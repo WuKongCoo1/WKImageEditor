@@ -164,12 +164,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorScrollView.m"
-            timestampString = "548062597.396786"
+            timestampString = "548066544.266724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "422"
             endingLineNumber = "422"
             landmarkName = "-layoutSubviews"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorScrollView.m"
+            timestampString = "548066544.267067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
+            landmarkName = "-setMaxMinZoomScalesForCurrentBounds"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
