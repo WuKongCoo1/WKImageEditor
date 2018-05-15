@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WKImageEditor'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = '图片编辑工具'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/WuKongCoo1/WKImageEditor.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.resources = ['WKImageEditor/Assets.xcassets/**/*', 'WKImageEditor/**/*.xib']
+  s.resources = ['WKImageEditor/Assets/**/*', 'WKImageEditor/**/*.xib']
 
   s.ios.deployment_target = '7.0'
 
