@@ -46,8 +46,9 @@ static WKImageEditorDrawToolInfoKey WKImageEditorDrawToolInfoKeyBezier = @"WKIma
 @property (nonatomic, copy) UIImage *originalImage;
 @property (nonatomic, assign) CGSize drawSize;//绘制size
 @property (copy, nonatomic) UIColor *drawColor;//绘制颜色
+@property (assign, nonatomic) CGFloat lineWidth;//绘制线条宽度
 
-+ (UIImage *)drawImage:(WKImageEditorDrawToolDrawType)type size:(CGSize)drawSize originalImage:(UIImage *)originalImage from:(CGPoint)from endPoint:(CGPoint)to drawColor:(UIColor *)color;
++ (UIImage *)drawImage:(WKImageEditorDrawToolDrawType)type size:(CGSize)drawSize originalImage:(UIImage *)originalImage from:(CGPoint)from endPoint:(CGPoint)to drawColor:(UIColor *)color lineWidth:(CGFloat)lineWidth;
 + (instancetype)imageEditorDrawTool:(CGSize)drawSize originalImage:(UIImage *)originalImage;
 
 /**

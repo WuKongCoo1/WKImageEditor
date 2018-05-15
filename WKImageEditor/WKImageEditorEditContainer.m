@@ -266,4 +266,10 @@ WKImageEditorOperateDelegate
     _drawFont = drawFont;
     self.inputTextViewContainer.drawFont = drawFont;
 }
+
+- (void)setLineWidth:(CGFloat)lineWidth
+{
+    self.scorllView.lineWidth = lineWidth;
+    _lineWidth = lineWidth;
+}
 @end

@@ -31,6 +31,7 @@
 - (IBAction)Backspace:(id)sender;
 - (IBAction)addText:(id)sender;
 - (IBAction)endEditImage:(id)sender;
+- (IBAction)addLineWidth:(id)sender;
 
 @end
 
@@ -190,6 +191,9 @@
     self.chooseTextSizeView = chooseTextSizeView;
     
     
+    //设置线条宽度
+    self.container.lineWidth = 3.f;
+    
 }
 
 
@@ -233,6 +237,8 @@
     [self.container endEditing];
     self.container.drawFont = [UIFont systemFontOfSize:(self.container.drawFont.pointSize + 5)];
 }
+
+
 - (IBAction)clear:(id)sender {
     [self.container clear];
 }
@@ -240,5 +246,9 @@
     [self.container resultImage:^(UIImage *image) {
         
     }];
+}
+
+- (IBAction)addLineWidth:(id)sender {
+    self.container.lineWidth += self.container.lineWidth;
 }
 @end

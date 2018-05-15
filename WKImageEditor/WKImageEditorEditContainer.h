@@ -19,6 +19,7 @@ WKImageEditorOperatorProtocol
 @property (assign, nonatomic) WKImageEditType type;//编辑子类型，表示当前具体的编辑类型是划线还是文字等
 @property (strong, nonatomic) UIColor *drawColor;
 @property (strong, nonatomic) UIFont *drawFont;
+@property (assign, nonatomic) CGFloat lineWidth;//绘制线条宽度
 
 + (instancetype)imageEditorEditContainerWithUrl:(NSString *)url;
 + (instancetype)imageEditorEditContainerWithImage:(UIImage *)image;

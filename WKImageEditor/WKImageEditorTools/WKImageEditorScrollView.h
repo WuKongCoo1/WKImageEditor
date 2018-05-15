@@ -29,7 +29,8 @@ WKImageEditorOperatorProtocol
 @property (nonatomic, assign, readonly) BOOL isEditing;//是否处于编辑状态
 @property (assign, nonatomic) WKImageEditorScrollViewDrawType drawType;//绘制类型
 @property (assign, nonatomic) WKImageEditorOperateType OperateType;//操作类型，用于指定编辑结果是基于图片还是视图直接截图
-@property (copy, nonatomic) UIColor *drawColor;
+@property (copy, nonatomic) UIColor *drawColor;//绘制颜色
+@property (assign, nonatomic) CGFloat lineWidth;//绘制线条宽度
 
 - (void)setImageURL:(NSString *)imageUrlString thumb:(NSString *)thumbImageUrlString completeBlock:(void(^ _Nullable )(UIImage *))completeBlock;
 - (void)setImage:(UIImage *)image;

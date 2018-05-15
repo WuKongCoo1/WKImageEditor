@@ -8,20 +8,23 @@
 
 #import "WKImageEditorDrawTool.h"
 
+
 @implementation WKImageEditorDrawTool
 {
     UIImage *_editedImage;
 }
+@synthesize lineWidth= _lineWidth;
 
 + (instancetype)imageEditorDrawTool:(CGSize)drawSize originalImage:(UIImage *)originalImage
 {
     WKImageEditorDrawTool *tool = [[WKImageEditorDrawTool alloc] init];
     tool.drawSize = drawSize;
     tool.originalImage = originalImage;
+    
     return tool;
 }
 
-+ (UIImage *)drawImage:(WKImageEditorDrawToolDrawType)type size:(CGSize)drawSize originalImage:(UIImage *)originalImage from:(CGPoint)from endPoint:(CGPoint)to drawColor:(UIColor *)color
++ (UIImage *)drawImage:(WKImageEditorDrawToolDrawType)type size:(CGSize)drawSize originalImage:(UIImage *)originalImage from:(CGPoint)from endPoint:(CGPoint)to drawColor:(UIColor *)color  lineWidth:(CGFloat)lineWidth
 {
     CGSize size = drawSize;
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
@@ -30,7 +33,7 @@
     
     switch (type) {
         case WKImageEditorDrawToolDrawTypeLine:{
-            [self drawLine:context from:from to:to drawColor:color];
+            [self drawLine:context from:from to:to drawColor:color lineWidth:lineWidth];
         }
             break;
             
@@ -40,7 +43,7 @@
     
     [originalImage drawAtPoint:CGPointZero];
     
-    CGFloat strokeWidth = 1;
+    CGFloat strokeWidth = lineWidth;
     
     CGContextSetLineWidth(context, strokeWidth);
     CGContextSetStrokeColorWithColor(context, color.CGColor);
@@ -57,9 +60,9 @@
     return resultImage;
 }
 
-+ (UIImage *)drawLine:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color
++ (UIImage *)drawLine:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color lineWidth:(CGFloat)lineWidth
 {
-    CGFloat strokeWidth = 1;
+    CGFloat strokeWidth = lineWidth;
     
     CGContextSetLineWidth(context, strokeWidth);
     CGContextSetStrokeColorWithColor(context, color.CGColor);
@@ -74,12 +77,12 @@
     return resultImage;
 }
 
-+ (UIImage *)drawRect:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color
++ (UIImage *)drawRect:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color lineWidth:(CGFloat)lineWidth
 {
     CGRect rect = [self rectWithPoint:from to:to];
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:rect];
     
-    CGFloat strokeWidth = 1;
+    CGFloat strokeWidth = lineWidth;
     
     CGContextSetLineWidth(context, strokeWidth);
     CGContextSetStrokeColorWithColor(context, color.CGColor);
@@ -93,11 +96,11 @@
     return resultImage;
 }
 
-+ (UIImage *)drawCircle:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color
++ (UIImage *)drawCircle:(CGContextRef)context from:(CGPoint)from to:(CGPoint)to drawColor:(UIColor *)color lineWidth:(CGFloat)lineWidth
 {
     CGRect rect = [self rectWithPoint:from to:to];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
-    CGFloat strokeWidth = 1;
+    CGFloat strokeWidth = lineWidth;
     
     
     CGContextSetLineWidth(context, strokeWidth);
@@ -114,10 +117,10 @@
 
 
 
-+ (UIImage *)drawPath:(CGContextRef)context path:(CGPathRef)path  drawColor:(UIColor *)color
++ (UIImage *)drawPath:(CGContextRef)context path:(CGPathRef)path  drawColor:(UIColor *)color lineWidth:(CGFloat)lineWidth
 {
     CGContextAddPath(context, path);
-    CGFloat strokeWidth = 1;
+    CGFloat strokeWidth = lineWidth;
     
     CGContextSetLineWidth(context, strokeWidth);
     CGContextSetStrokeColorWithColor(context, color.CGColor);
@@ -141,6 +144,7 @@
         NSAssert(numberOfDrawTask >= 0, @"绘制任务不能小于0");
         
         CGSize size = self.drawSize;
+        CGFloat lineWidth = self.lineWidth;
         UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
         UIImage *resultImage;
         CGContextRef context = UIGraphicsGetCurrentContext();
@@ -164,18 +168,18 @@
             
             switch (drawType) {
                 case WKImageEditorDrawToolDrawTypeLine:
-                   resultImage = [WKImageEditorDrawTool drawLine:context from:from to:to drawColor:drawColor];
+                   resultImage = [WKImageEditorDrawTool drawLine:context from:from to:to drawColor:drawColor lineWidth:lineWidth];
                     break;
                 case WKImageEditorDrawToolDrawTypeBezier:{
                     UIBezierPath *bezierPath = drawInfo[WKImageEditorDrawToolInfoKeyBezier];
-                    resultImage = [WKImageEditorDrawTool drawPath:context path:bezierPath.CGPath drawColor:drawColor];
+                    resultImage = [WKImageEditorDrawTool drawPath:context path:bezierPath.CGPath drawColor:drawColor lineWidth:lineWidth];
                 }
                     break;
                 case WKImageEditorDrawToolDrawTypeRect:
-                    resultImage = [WKImageEditorDrawTool drawRect:context from:from to:to drawColor:drawColor];
+                    resultImage = [WKImageEditorDrawTool drawRect:context from:from to:to drawColor:drawColor lineWidth:lineWidth];
                     break;
                 case WKImageEditorDrawToolDrawTypeCircle:
-                    resultImage = [WKImageEditorDrawTool drawCircle:context from:from to:to drawColor:drawColor];
+                    resultImage = [WKImageEditorDrawTool drawCircle:context from:from to:to drawColor:drawColor lineWidth:lineWidth];
                     break;
                 default:
                     break;
@@ -206,6 +210,20 @@
     CGFloat heigth = maxY - minY;
     
     return CGRectMake(minX, minY, width, heigth);
+}
+
+- (CGFloat)lineWidth
+{
+    if (_lineWidth <= 0) {
+        _lineWidth = 1.f;
+    }
+    return _lineWidth;
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth
+{
+    _lineWidth = lineWidth;
+    [self redraw];
 }
 
 

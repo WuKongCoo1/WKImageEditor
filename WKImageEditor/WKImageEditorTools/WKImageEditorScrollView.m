@@ -99,6 +99,7 @@ WKImageEditorDrawToolDataSource
     [self addTapGesture];
     
     self.operateID = 1;
+    self.lineWidth = 1.f;
 }
 
 - (void)addTapGesture
@@ -510,6 +511,7 @@ WKImageEditorDrawToolDataSource
         self.drawTool.dataSource = self;
         self.drawTool.drawColor = self.drawColor;
         self.drawTool.OperateType = self.OperateType;
+        self.drawTool.lineWidth = self.lineWidth;
     }
     
     //分别判断点
@@ -662,6 +664,12 @@ WKImageEditorDrawToolDataSource
         _drawDataSource = [NSMutableArray array];
     }
     return _drawDataSource;
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth
+{
+    self.drawTool.lineWidth = lineWidth;
+    _lineWidth = lineWidth;
 }
 
 
