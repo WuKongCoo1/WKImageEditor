@@ -80,15 +80,6 @@ WKImageEditorDrawToolDataSource
     return self;
 }
 
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        [self commonSetup];
-//    }
-//    return self;
-//}
-
 - (void)commonSetup
 {
     [self imageView];
@@ -128,7 +119,6 @@ WKImageEditorDrawToolDataSource
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.imageView;
-//    return self.isEditing ? nil : self.imageView;
 }
 
 //开始缩放的时候调用
@@ -156,9 +146,6 @@ WKImageEditorDrawToolDataSource
     
     NSInteger touches = ges.numberOfTapsRequired;
     if (touches == 1) {//重新加载
-//        if ([self leql_loadFail]) {
-//            [self setImageURL:self.imageUrlString thumb:self.thumbImageUrlString completeBlock:self.completeBlock];
-//        }
         if (self.isEditing && self.currentInputTextView.isFirstResponder) {//当前在编辑
             if (!CGRectContainsPoint(self.currentInputTextView.frame, point)) {//关闭编辑
                 [self endEditing:YES];
@@ -220,9 +207,6 @@ WKImageEditorDrawToolDataSource
     self.imageUrlString = imageUrlString;
     self.thumbImageUrlString = self.thumbImageUrlString;
     
-//    [self leql_hideLoadImageFail];
-    
-//    self.loadedOriginalImage = NO;
     self.imageView.image = nil;
     [self.imageOperation cancel];
     [self.thumbImageOperation cancel];
@@ -230,11 +214,11 @@ WKImageEditorDrawToolDataSource
     self.maximumZoomScale = 1.f;
     
     NSURL *imageURL = [NSURL URLWithString:imageUrlString];
-//    UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:imageUrlString];
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:imageUrlString];
     
-//    if (image) {
-////        [self completeLoadOriginalImage:image completeBlock:completeBlock];
-//    }else{
+    if (image) {
+        [self completeLoadOriginalImage:image completeBlock:completeBlock];
+    }else{
         self.imageOperation = [self loadImageWithURL:imageURL
                                             progress:^(CGFloat progress) {
                                                 
@@ -242,17 +226,18 @@ WKImageEditorDrawToolDataSource
                                            completed:^(UIImage *image, NSError *error) {
                                                [self completeLoadOriginalImage:image completeBlock:completeBlock];
                                            }];
-//    }
+    }
 }
 
 - (void)setImage:(UIImage *)image
 {
     [self.imageOperation cancel];
     [self.thumbImageOperation cancel];
-    
     self.imageView.image = image;
     self.originalImage = image;
     [self displayImage];
+    
+    
 }
 
 - (id <SDWebImageOperation>)loadImageWithURL:(NSURL *)url progress:(void(^)(CGFloat progress))progressBlock completed:(void(^)(UIImage *image, NSError *error))completeBlock
@@ -262,18 +247,14 @@ WKImageEditorDrawToolDataSource
                                                       progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
                                                           CGFloat progress = (CGFloat)receivedSize / expectedSize;
                                                           progressBlock(progress);
-                                                          //                                                          [self setWK_ProgressBackgroundColor:kThemeMaskColor];
-//                                                          [self setWK_Progress:progress];
+
                                                       }
                                                      completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
                                                          self.maximumZoomScale = 3;
                                                          if (error) {
-//                                                             [self setWK_Progress:1];
-//                                                             [self leql_showLoadImageFail];
+
                                                          }else{
-//                                                             [self leql_hideLoadImageFail];
-//                                                             self.imageView.image = image;
-//                                                             [self displayImage];
+
                                                              [self setImage:image];
                                                              NSLog(@"%@", imageURL);
                                                          }
@@ -412,7 +393,7 @@ WKImageEditorDrawToolDataSource
         zoomScale = MIN(MAX(self.minimumZoomScale, zoomScale), self.maximumZoomScale);
     }
     
-    return zoomScale;
+    return zoomScale <= 0 ? 1 : zoomScale;
 }
 
 - (void)layoutSubviews
@@ -447,6 +428,9 @@ WKImageEditorDrawToolDataSource
 - (void)completeLoadOriginalImage:(UIImage *)image completeBlock:(void (^)(UIImage *))completeBlock
 {
     [self setImage:image];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+    });
     if (completeBlock) {
         completeBlock(image);
     }
@@ -653,7 +637,6 @@ WKImageEditorDrawToolDataSource
 #pragma mark WKImageEditorDrawToolDelegate
 - (void)imageEditorDrawToolDidDrawImage:(WKImageEditorDrawTool *)drawTool drawImage:(UIImage *)drawImage
 {
-//    [self setImage:drawImage];
     self.imageView.image = drawImage;
 }
 

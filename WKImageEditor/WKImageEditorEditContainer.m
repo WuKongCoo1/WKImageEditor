@@ -120,7 +120,7 @@ WKImageEditorOperateDelegate
 {
     if (self.imageUrl) {
         [self.scorllView setImageURL:self.imageUrl thumb:self.imageUrl completeBlock:^(UIImage * _Nonnull image) {
-            
+
         }];
     }else if (self.image){
         [self.scorllView setImage:self.image];
