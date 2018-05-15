@@ -132,6 +132,11 @@ WKImageEditorOperateDelegate
 //
 //}
 
+- (void)layoutSubviews
+{
+    [self.scorllView displayImage];
+}
+
 #pragma mark - 初始化
 - (void)beginEditing
 {
