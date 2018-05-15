@@ -11,6 +11,14 @@
 #import <Masonry/Masonry.h>
 #import "UIButton+WKBlock.h"
 #import "UIImage+WKColor.h"
+
+#define WKUIColorFromRGBAWithAlpha(rgbValue, alphaValue) \
+[UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0x0000FF))/255.0 \
+alpha:alphaValue]
+
 @interface WKImageEditorChooseTextSizeView()
 
 @property (nonatomic, strong) OAStackView *stackView;
@@ -40,7 +48,7 @@
 - (void)commonSetup
 {
     //背景色
-    self.backgroundColor = [self colorWithRed:219 green:219 blue:219];
+//    self.backgroundColor = WKUIColorFromRGBAWithAlpha(0x4a4a4a, 0.85);
     void (^handleLayer)(CALayer *layer) = ^(CALayer *layer){
         layer.cornerRadius = 3.f;
         layer.masksToBounds = YES;
@@ -78,8 +86,8 @@
     //    黑：#000000，白#ffffff，深红：#ab0006，大红：#ff0404，橘黄：#fe6200，亮黄：#f8f700，绿：#00bb35，湖蓝：#00e1ef，群青：#0000ff，紫罗兰：#e010ff
     NSArray *fontSizes = @[@14, @18, @22, @26, @30, @34, @38, @42, @46, @60];
     
-    UIColor *normalBackgroundColor = [self colorWithRed:219 green:219 blue:219];
-    UIColor *highlightedOrSelectedBackgroundColor = [self colorWithRed:188 green:188 blue:188];
+    UIColor *normalBackgroundColor = WKUIColorFromRGBAWithAlpha(0x4a4a4a, 0.85);;
+    UIColor *highlightedOrSelectedBackgroundColor = WKUIColorFromRGBAWithAlpha(0x4a4a4a, 1);
     UIImage *normalImage = [UIImage wk_imageWithColor:normalBackgroundColor size:CGSizeMake(100, 100)];
     UIImage *selectedOrHighlightedImage = [UIImage wk_imageWithColor:highlightedOrSelectedBackgroundColor size:CGSizeMake(100, 100)];
     [fontSizes enumerateObjectsUsingBlock:^(NSNumber *  _Nonnull fontSize, NSUInteger idx, BOOL * _Nonnull stop) {

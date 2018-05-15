@@ -18,6 +18,13 @@ green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0x0000FF))/255.0 \
 alpha:1]
 
+#define WKUIColorFromRGBAWithAlpha(rgbValue, alphaValue) \
+[UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0x0000FF))/255.0 \
+alpha:alphaValue]
+
 @interface WKImageEditorChooseColorView()
 
 @property (nonatomic, strong) OAStackView *stackView;
@@ -47,7 +54,7 @@ alpha:1]
 - (void)commonSetup
 {
     //背景色
-    self.backgroundColor = [self colorWithRed:219 green:219 blue:219];
+    self.backgroundColor = WKUIColorFromRGBAWithAlpha(0x4a4a4a, 0.85);
     void (^handleLayer)(CALayer *layer) = ^(CALayer *layer){
         layer.cornerRadius = 3.f;
         layer.masksToBounds = YES;

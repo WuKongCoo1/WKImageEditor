@@ -20,8 +20,8 @@ alpha:alphaValue]
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    UIColor *normalBackgroundColor = [self colorWithRed:219 green:219 blue:219];
-    UIColor *highlightedOrSelectedBackgroundColor = [self colorWithRed:188 green:188 blue:188];
+    UIColor *normalBackgroundColor = WKUIColorFromRGBA(0x4a4a4a, 0.85);
+    UIColor *highlightedOrSelectedBackgroundColor = WKUIColorFromRGBA(0x4a4a4a, 1);
     
     [self setBackgroundImage:[self imageWithColor:normalBackgroundColor size:CGSizeMake(1, 1)] forState:UIControlStateNormal];
     [self setBackgroundImage:[self imageWithColor:highlightedOrSelectedBackgroundColor size:CGSizeMake(1, 1)] forState:UIControlStateHighlighted];

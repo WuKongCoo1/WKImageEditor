@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorChooseColorView.m"
-            timestampString = "547723414.44066"
+            timestampString = "548045852.61409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-commonSetup"
             landmarkType = "7">
          </BreakpointContent>
@@ -131,13 +131,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorToolBar.m"
-            timestampString = "547723414.440729"
+            filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorChooseTextSizeView.m"
+            timestampString = "548045852.614163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-safeHandleOepreate:type:"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-setFontSizeIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../WKImageEditor/WKImageEditorTools/WKImageEditorChooseTextSizeView.m"
+            timestampString = "548045852.6144741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-setFontSizeIndex:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
