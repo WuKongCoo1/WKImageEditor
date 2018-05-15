@@ -48,7 +48,7 @@ alpha:alphaValue]
 - (void)commonSetup
 {
     //背景色
-//    self.backgroundColor = WKUIColorFromRGBAWithAlpha(0x4a4a4a, 0.85);
+    self.backgroundColor = [UIColor clearColor];
     void (^handleLayer)(CALayer *layer) = ^(CALayer *layer){
         layer.cornerRadius = 3.f;
         layer.masksToBounds = YES;
